@@ -28,4 +28,20 @@ class RecipeService {
       body: jsonEncode(body),
     );
   }
+
+  static Future<void> updateRecipe({
+    required int id,
+    required Map<String, dynamic> body,
+  }) async {
+    await http.patch(
+      Uri.parse('${ApiConfig.baseUrl}/recipes?id=eq.$id'),
+      headers: {
+        'apikey': ApiConfig.apiKey,
+        'Authorization': 'Bearer ${ApiConfig.apiKey}',
+        'Content-Type': 'application/json',
+        'Prefer': 'return=representation',
+      },
+      body: jsonEncode(body),
+    );
+  }
 }
