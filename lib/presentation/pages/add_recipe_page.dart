@@ -56,7 +56,7 @@ class _AddRecipePageState extends State<AddRecipePage> {
     });
 
     setState(() => isLoading = false);
-    Navigator.pop(context);
+    Navigator.pop(context, true);
   }
 
   InputDecoration _inputDecoration(String label) {
