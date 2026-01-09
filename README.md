@@ -47,7 +47,7 @@ berdasarkan kategori.
 
 ---
 
-## 📂 Struktur Folder
+📂 Struktur Folder
 
 lib/
 ├── design_system/
@@ -80,7 +80,7 @@ lib/
 
 ---
 
-## 🖼️ Screenshot Aplikasi
+🖼️ Screenshot Aplikasi
 
 docs/
 ├── dashboard.png
