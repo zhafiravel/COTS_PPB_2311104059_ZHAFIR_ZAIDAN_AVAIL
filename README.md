@@ -13,15 +13,11 @@ Aplikasi ini dibuat untuk memenuhi tugas **Coding On The Spot (COTS)** mata kuli
 
 Aplikasi **Resep Masakan** adalah aplikasi mobile berbasis **Flutter** yang digunakan untuk
 mengelola data resep makanan.  
-Aplikasi ini terhubung ke **Supabase REST API** dan mendukung operasi:
+Aplikasi ini terhubung dengan **Supabase REST API** dan menyediakan fitur **CRUD**
+(Create, Read, Update) yang lengkap.
 
-- Menampilkan daftar resep
-- Melihat detail resep
-- Menambah resep baru
-- Mengedit resep (PATCH API)
-
-Aplikasi ini menggunakan **Local State Management (`setState`)** dan
-menerapkan **design system** untuk menjaga konsistensi tampilan.
+Aplikasi juga memiliki **Dashboard Statistik** untuk menampilkan jumlah resep
+berdasarkan kategori.
 
 ---
 
@@ -29,13 +25,15 @@ menerapkan **design system** untuk menjaga konsistensi tampilan.
 
 | Fitur | Keterangan |
 |------|----------|
-| Dashboard | Halaman utama untuk navigasi |
-| Daftar Resep | Menampilkan semua resep dari API |
-| Detail Resep | Menampilkan informasi lengkap resep |
-| Tambah Resep | Menyimpan resep baru ke Supabase |
-| Edit Resep | Mengubah data resep menggunakan PATCH API |
+| Dashboard | Halaman utama dengan statistik jumlah resep |
+| Statistik Resep | Total, Sarapan, Makan Siang, Makan Malam, Dessert |
+| Daftar Resep | Menampilkan semua resep dari Supabase |
+| Detail Resep | Menampilkan informasi lengkap |
+| Tambah Resep | Menyimpan resep baru ke Supabase (POST) |
+| Edit Resep | Mengubah resep menggunakan PATCH API |
 | Validasi Form | Mencegah input kosong |
-| Auto Refresh | Data otomatis diperbarui setelah edit/tambah |
+| Auto Refresh | Data otomatis diperbarui setelah tambah/edit |
+| UI Konsisten | Menggunakan design system (colors, spacing, typography) |
 
 ---
 
@@ -50,41 +48,42 @@ menerapkan **design system** untuk menjaga konsistensi tampilan.
 ---
 
 ## 📂 Struktur Folder
+
 lib/
 ├── design_system/
-│ ├── colors.dart
-│ ├── typography.dart
-│ └── spacing.dart
+│   ├── colors.dart
+│   ├── typography.dart
+│   └── spacing.dart
 │
 ├── models/
-│ └── recipe_model.dart
+│   └── recipe_model.dart
 │
 ├── services/
-│ └── recipe_service.dart
+│   └── recipe_service.dart
 │
 ├── presentation/
-│ ├── pages/
-│ │ ├── dashboard_page.dart
-│ │ ├── recipe_list_page.dart
-│ │ ├── recipe_detail_page.dart
-│ │ ├── add_recipe_page.dart
-│ │ └── edit_recipe_page.dart
-│ │
-│ └── widgets/
-│ ├── recipe_card.dart
-│ └── primary_button.dart
+│   ├── pages/
+│   │   ├── dashboard_page.dart
+│   │   ├── recipe_list_page.dart
+│   │   ├── recipe_detail_page.dart
+│   │   ├── add_recipe_page.dart
+│   │   └── edit_recipe_page.dart
+│   │
+│   └── widgets/
+│       ├── recipe_card.dart
+│       └── primary_button.dart
 │
 ├── config/
-│ └── api_config.dart
+│   └── api_config.dart
 │
 └── main.dart
 
 ---
 
 ## 🖼️ Screenshot Aplikasi
+
 docs/
 ├── dashboard.png
 ├── daftar_resep.png
 ├── detail_resep.png
 └── tambah_resep.png
-
