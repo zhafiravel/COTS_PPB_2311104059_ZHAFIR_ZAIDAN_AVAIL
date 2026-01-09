@@ -82,8 +82,8 @@ lib/
 
 ## 🖼️ Screenshot Aplikasi
 
-docs/
-├── dashboard.png
-├── daftar_resep.png
-├── detail_resep.png
-└── tambah_resep.png
+![Dashboard](docs/dashboard.png)
+![Daftar Resep](docs/daftar_resep.png)
+![Detail Resep](docs/detail_resep.png)
+![Tambah Resep](docs/tambah_resep.png)
+
