@@ -1,16 +1,90 @@
-# cots
+# COTS – Pemrograman Perangkat Bergerak
 
-A new Flutter project.
+**Nama**  : Zhafir Zaidan Avail  
+**NIM**   : 2311104059  
+**Kelas** : SE-07-02  
 
-## Getting Started
+Aplikasi ini dibuat untuk memenuhi tugas **Coding On The Spot (COTS)** mata kuliah  
+**Pemrograman Perangkat Bergerak**.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Deskripsi Aplikasi
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Aplikasi **Resep Masakan** adalah aplikasi mobile berbasis **Flutter** yang digunakan untuk
+mengelola data resep makanan.  
+Aplikasi ini terhubung ke **Supabase REST API** dan mendukung operasi:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Menampilkan daftar resep
+- Melihat detail resep
+- Menambah resep baru
+- Mengedit resep (PATCH API)
+
+Aplikasi ini menggunakan **Local State Management (`setState`)** dan
+menerapkan **design system** untuk menjaga konsistensi tampilan.
+
+---
+
+## 🚀 Fitur Utama
+
+| Fitur | Keterangan |
+|------|----------|
+| Dashboard | Halaman utama untuk navigasi |
+| Daftar Resep | Menampilkan semua resep dari API |
+| Detail Resep | Menampilkan informasi lengkap resep |
+| Tambah Resep | Menyimpan resep baru ke Supabase |
+| Edit Resep | Mengubah data resep menggunakan PATCH API |
+| Validasi Form | Mencegah input kosong |
+| Auto Refresh | Data otomatis diperbarui setelah edit/tambah |
+
+---
+
+## 🧩 Teknologi
+
+- Flutter
+- Dart
+- Supabase REST API
+- Local State Management (`setState`)
+- Material Design
+
+---
+
+## 📂 Struktur Folder
+lib/
+├── design_system/
+│ ├── colors.dart
+│ ├── typography.dart
+│ └── spacing.dart
+│
+├── models/
+│ └── recipe_model.dart
+│
+├── services/
+│ └── recipe_service.dart
+│
+├── presentation/
+│ ├── pages/
+│ │ ├── dashboard_page.dart
+│ │ ├── recipe_list_page.dart
+│ │ ├── recipe_detail_page.dart
+│ │ ├── add_recipe_page.dart
+│ │ └── edit_recipe_page.dart
+│ │
+│ └── widgets/
+│ ├── recipe_card.dart
+│ └── primary_button.dart
+│
+├── config/
+│ └── api_config.dart
+│
+└── main.dart
+
+---
+
+## 🖼️ Screenshot Aplikasi
+docs/
+├── dashboard.png
+├── daftar_resep.png
+├── detail_resep.png
+└── tambah_resep.png
+
